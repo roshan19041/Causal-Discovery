@@ -2,6 +2,8 @@
 
 The overall Causal discovery and Intervention modelling algorithm implemented here is based on a hybrid approach.
 
+## <div style="text-align: center">Causal Discovery</div>
+
 <div style="text-align: justify">The Conditional-Independence test applied while estimating the skeleton structure of the underlying causal model is based on Decision Tree Regressors.</div><br>
 
 <div style="text-align: justify">It is a non-parametric, fast conditional independence test that is based on the following intuition : <br>
