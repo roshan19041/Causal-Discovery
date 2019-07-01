@@ -32,8 +32,10 @@ Finally, the algorithm outputs a Directed Acyclic Graph representing the Causal 
 
 <div style="text-align: justify"> The algorithm further builds a collection of Deep Neural Networks on a learned Causal Graphical Model. Each node has a corresponding Neural Network as a function approximator for the function X = f(Noise, Parents(X)). Hence, the input to any node is now a function of the outputs of the Neural Networks of it's parent nodes and some random noise. The result is a Data Generation Mechanism that exploits a Causal Structure to model interventions. The Network will be trained by generating data and updating the weights based on the gradients of the Max-Mean Discrepancy between observed data and generated data. Due to computational reasons, such a network has not been included in this notebook. However, code implementation in tensorflow is available in this repository.</div><br>
  
-<div style="text-align: justify"> How to model interventions? 
+<div style="text-align: justify"> How to model interventions?</div><br>
     
-   Well, for any <i>do-Variable</i>, the corresponding node-neural-network in the graph is shut down and then generated data can be analyzed to observe how the joint distribution of other variables change.</div><br>
+<div style="text-align: justify"> Well, for any <i>do-Variable</i>, the corresponding node-neural-network in the graph is shut down and then generated data can be analyzed to observe how the joint distribution of other variables change.</div><br>
   
 <div style="text-align: justify"> This collective Neural Network is based on the research paper : <b><i>"Learning Functional Causal Models with Generative Neural Networks"</b></i> by Diviyan Kalainathan et al. <a href="https://arxiv.org/pdf/1709.05321.pdf"> (Link here) </a><br></div>
+
+For some simple results, please refer to the .ipynb file in the source code.
