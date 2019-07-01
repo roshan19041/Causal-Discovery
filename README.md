@@ -1,4 +1,4 @@
-# Causal-Discovery : A Hybrid approach to Causal Structure Learning and Intervention Modelling
+# Causal Discovery : A Hybrid approach to Causal Structure Learning and Intervention Modelling
 
 The overall Causal discovery and Intervention modelling algorithm implemented here is based on a hybrid approach.
 
