@@ -36,6 +36,6 @@ Finally, the algorithm outputs a Directed Acyclic Graph representing the Causal 
     
 <div style="text-align: justify"> Well, for any <i>do-Variable</i>, the corresponding node-neural-network in the graph is shut down and then generated data can be analyzed to observe how the joint distribution of other variables change.</div><br>
   
-<div style="text-align: justify"> This collective Neural Network is based on the research paper : <b><i>"Learning Functional Causal Models with Generative Neural Networks"</b></i> by Diviyan Kalainathan et al. <a href="https://arxiv.org/pdf/1709.05321.pdf"> (Link here) </a><br></div>
+<div style="text-align: justify"> This collective Neural Network is based on the research paper : <b><i>"Learning Functional Causal Models with Generative Neural Networks"</b></i> by Diviyan Kalainathan et al. <a href="https://arxiv.org/pdf/1709.05321.pdf"> (Link here) </a></div><br>
 
 For some simple results, please refer to the .ipynb file in the source code.
