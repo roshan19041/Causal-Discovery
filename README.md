@@ -2,7 +2,7 @@
 
 The overall Causal discovery and Intervention modelling algorithm implemented here is based on a hybrid approach.
 
-## <div style="text-align: center">1. Conditional-Independence Criterion</div>
+### <div style="text-align: center">1. Conditional-Independence Criterion</div>
 
 <div style="text-align: justify">The Conditional-Independence test applied while estimating the skeleton structure of the underlying causal model is based on Decision Tree Regressors.</div><br>
 
@@ -13,7 +13,7 @@ The overall Causal discovery and Intervention modelling algorithm implemented he
 <div style="text-align: justify"> This test and therefore the code used to implement this test is based on the work: <b><i>" Fast Conditional Independence Test for Vector Variables with Large Sample Sizes "</b></i> by Krzysztof Chalupka et al. <a href="https://arxiv.org/pdf/1804.02747.pdf"> (Link here) </a>
  <br>
     
- ## <div style="text-align: center">2. Causal Discovery</div>
+ ### <div style="text-align: center">2. Causal Discovery</div>
  
 <div style="text-align: justify">The procedure for structure learning is as follows: </div><br>
 
@@ -28,7 +28,7 @@ Finally, the algorithm outputs a Directed Acyclic Graph representing the Causal 
 
 <b>IMPORTANT NOTES</b> : <i>As with any Causal Discovery algorithms, this algorithm must be treated as a first-step to causal discovery as opposed to a complete, and fully reliable causal inference method.</i><br>
 
-# <div style="text-align: center">3. Causal Generative Neural Networks</div>
+### <div style="text-align: center">3. Causal Generative Neural Networks</div>
 
 <div style="text-align: justify"> The algorithm further builds a collection of Deep Neural Networks on a learned Causal Graphical Model. Each node has a corresponding Neural Network as a function approximator for the function X = f(Noise, Parents(X)). Hence, the input to any node is now a function of the outputs of the Neural Networks of it's parent nodes and some random noise. The result is a Data Generation Mechanism that exploits a Causal Structure to model interventions. The Network will be trained by generating data and updating the weights based on the gradients of the Max-Mean Discrepancy between observed data and generated data. Due to computational reasons, such a network has not been included in this notebook. However, code implementation in tensorflow is available in this repository.</div><br>
  
