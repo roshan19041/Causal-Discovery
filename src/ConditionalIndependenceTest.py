@@ -96,7 +96,7 @@ def _compute_error(data_tuple):
     model.fit(x[shuffled_idxs][n_test:], data_dict['y'][shuffled_idxs][n_test:])
     return mse(data_dict['y'][shuffled_idxs][:n_test], model.predict(x[shuffled_idxs][:n_test]))
     
-def test_conditional_independence(x, y, z, nruns=8, params_grid={'min_samples_split':[2, 8, 64, 512, 1e-2, .2, .4]}, test_size=0.1, threshold=0.01):
+def test_conditional_independence(x, y, z, nruns=8, params_grid={'min_samples_split':[2, 8, 64, 512, 1e-2, .2, .4]}, test_size=0.1, threshold=0.01, verbose=False):
     """
     Performs fast conditional/unconditional independence tests using Decision Tree Regressors.
     
@@ -141,6 +141,10 @@ def test_conditional_independence(x, y, z, nruns=8, params_grid={'min_samples_sp
         p_val = 1-p_val/2
     else:
         p_val = p_val/2
+    
+    # print out p-val if required
+    if verbose:
+        print('p-value for the null hypothesis that X and Y are conditionally independent, given Z : {}'.format(p_val))
         
     # return if samples are independent or otherwise
     if p_val<threshold:
